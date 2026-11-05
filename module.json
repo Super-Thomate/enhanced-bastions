@@ -1,0 +1,39 @@
+{
+  "id": "enhanced-bastions",
+  "title": "Enhanced Bastions",
+  "description": "Homebrew bastion/buildings management for dnd5e.",
+  "version": "0.1.0",
+  "authors": [{ "name": "Thomate" }],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": { "minimum": "6.0.6" }
+      }
+    ]
+  },
+  "documentTypes": {
+    "Actor": {
+      "bastion": {
+        "htmlFields": ["description"]
+      }
+    }
+  },
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "hbs", "json"],
+      "paths": ["styles", "templates", "lang"]
+    }
+  },
+  "esmodules": ["scripts/main.mjs"],
+  "styles": ["styles/enhanced-bastions.css"],
+  "languages": [
+    { "lang": "en", "name": "English", "path": "lang/en.json" },
+    { "lang": "fr", "name": "Français", "path": "lang/fr.json" }
+  ]
+}

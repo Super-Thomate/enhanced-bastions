@@ -1,0 +1,62 @@
+{
+  "ENHANCED_BASTIONS": {
+    "Actor": {
+      "Bastion": "Bastion"
+    },
+    "Sheet": {
+      "Bastion": "Bastion Sheet"
+    },
+    "Bastion": {
+      "Name": "Bastion Name",
+      "Description": "Description"
+    },
+    "Space": {
+      "Label": "Buildings",
+      "Name": "Building name",
+      "New": "New building",
+      "Unnamed": "Unnamed building",
+      "Add": "Add a building",
+      "Delete": "Delete this building",
+      "DeleteConfirm": "Delete the building <strong>{name}</strong> and its posts? Its occupants become unassigned.",
+      "None": "No buildings yet."
+    },
+    "Place": {
+      "Add": "Add a post",
+      "Delete": "Remove this post",
+      "None": "No posts yet.",
+      "RemoveOccupant": "Remove this occupant",
+      "InvalidOccupant": "Only NPCs and player characters from this world can occupy a post.",
+      "AlreadyOccupied": "This post is already occupied.",
+      "DeleteOccupied": "Free this post before removing it."
+    },
+    "Role": {
+      "Label": "Space role",
+      "None": "No role",
+      "mercenary": "Mercenary",
+      "artisan": "Artisan",
+      "scholar": "Scholar",
+      "worker": "Worker"
+    },
+    "Order": {
+      "Label": "Order",
+      "None": "No order",
+      "keepOrder": "Keep the peace",
+      "patrol": "Patrol",
+      "hunt": "Hunt",
+      "explore": "Explore",
+      "craft": "Craft",
+      "repair": "Repair",
+      "enchant": "Enchant",
+      "teach": "Teach",
+      "study": "Study",
+      "castSpells": "Cast spells",
+      "createScrolls": "Create scrolls",
+      "translate": "Translate",
+      "build": "Build",
+      "harvest": "Harvest",
+      "assist": "Assist",
+      "transport": "Transport",
+      "tendAnimals": "Tend animals"
+    }
+  }
+}

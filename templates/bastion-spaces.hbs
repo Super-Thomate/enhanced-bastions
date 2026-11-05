@@ -1,0 +1,80 @@
+<section class="tab bastion-tab bastion-spaces {{tabs.spaces.cssClass}}"
+         data-tab="spaces" data-group="primary">
+  <h2>{{localize "ENHANCED_BASTIONS.Space.Label"}}</h2>
+  <div class="spaces-grid">
+    {{#each spaces as |space|}}
+    <article class="space" data-space-id="{{space.id}}">
+      <header class="space-header">
+        {{#if @root.canManageSpaces}}
+        <input class="space-name" id="{{@root.rootId}}-{{space.id}}-name" type="text" value="{{space.name}}"
+               placeholder="{{localize "ENHANCED_BASTIONS.Space.Unnamed"}}"
+               aria-label="{{localize "ENHANCED_BASTIONS.Space.Name"}}">
+        <button type="button" class="icon fa-solid fa-trash" data-action="deleteSpace"
+                data-tooltip="ENHANCED_BASTIONS.Space.Delete"
+                aria-label="{{localize "ENHANCED_BASTIONS.Space.Delete"}}"></button>
+        {{else}}
+        <h3>{{#if space.name}}{{space.name}}{{else}}{{localize "ENHANCED_BASTIONS.Space.Unnamed"}}{{/if}}</h3>
+        {{/if}}
+      </header>
+      {{#if @root.canManageSpaces}}
+      <select class="space-role" id="{{@root.rootId}}-{{space.id}}-role" aria-label="{{localize "ENHANCED_BASTIONS.Role.Label"}}">
+        {{selectOptions @root.roles selected=space.role blank="ENHANCED_BASTIONS.Role.None" localize=true}}
+      </select>
+      {{else}}
+      <p class="space-role-label">
+        {{#if space.roleLabel}}{{localize space.roleLabel}}{{else}}{{localize "ENHANCED_BASTIONS.Role.None"}}{{/if}}
+      </p>
+      {{/if}}
+      <div class="places-grid">
+        {{#each space.places as |place|}}
+        <div class="place" data-place-id="{{place.id}}">
+          {{#if place.occupant}}
+          <img class="place-occupant" src="{{place.occupant.img}}" alt="{{place.occupant.name}}" data-tooltip-text="{{place.occupant.name}}">
+          {{#if @root.editable}}
+          <button type="button" class="place-delete icon fa-solid fa-xmark" data-action="removeOccupant"
+                  data-tooltip="ENHANCED_BASTIONS.Place.RemoveOccupant"
+                  aria-label="{{localize "ENHANCED_BASTIONS.Place.RemoveOccupant"}}"></button>
+          {{/if}}
+          {{#if space.orders}}
+          {{#if @root.editable}}
+          <select class="place-order" id="{{@root.rootId}}-{{place.id}}-order"
+                  aria-label="{{localize "ENHANCED_BASTIONS.Order.Label"}}">
+            {{selectOptions space.orders selected=place.order blank="ENHANCED_BASTIONS.Order.None" localize=true}}
+          </select>
+          {{else}}
+          <p class="place-order-label">
+            {{#if place.orderLabel}}{{localize place.orderLabel}}{{else}}{{localize "ENHANCED_BASTIONS.Order.None"}}{{/if}}
+          </p>
+          {{/if}}
+          {{/if}}
+          {{else if @root.canManageSpaces}}
+          <button type="button" class="place-delete icon fa-solid fa-xmark" data-action="deletePlace"
+                  data-tooltip="ENHANCED_BASTIONS.Place.Delete"
+                  aria-label="{{localize "ENHANCED_BASTIONS.Place.Delete"}}"></button>
+          {{/if}}
+        </div>
+        {{/each}}
+        {{#if @root.canManageSpaces}}
+        <button type="button" class="place place-add icon fa-solid fa-plus" data-action="addPlace"
+                data-tooltip="ENHANCED_BASTIONS.Place.Add"
+                aria-label="{{localize "ENHANCED_BASTIONS.Place.Add"}}"></button>
+        {{else}}
+        {{#unless space.places.length}}
+        <p class="spaces-empty">{{localize "ENHANCED_BASTIONS.Place.None"}}</p>
+        {{/unless}}
+        {{/if}}
+      </div>
+    </article>
+    {{/each}}
+    {{#if canManageSpaces}}
+    <button type="button" class="space space-add" data-action="addSpace">
+      <i class="fa-solid fa-plus" inert></i>
+      <span>{{localize "ENHANCED_BASTIONS.Space.Add"}}</span>
+    </button>
+    {{else}}
+    {{#unless spaces.length}}
+    <p class="spaces-empty">{{localize "ENHANCED_BASTIONS.Space.None"}}</p>
+    {{/unless}}
+    {{/if}}
+  </div>
+</section>

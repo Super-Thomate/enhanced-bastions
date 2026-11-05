@@ -1,0 +1,7 @@
+<header class="bastion-header">
+  <img class="bastion-image" src="{{source.img}}" alt="{{source.name}}"
+       {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+  <input class="bastion-name" type="text" name="name" value="{{source.name}}"
+         placeholder="{{localize "ENHANCED_BASTIONS.Bastion.Name"}}"
+         aria-label="{{localize "ENHANCED_BASTIONS.Bastion.Name"}}">
+</header>

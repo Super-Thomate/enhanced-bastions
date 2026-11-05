@@ -1,0 +1,62 @@
+{
+  "ENHANCED_BASTIONS": {
+    "Actor": {
+      "Bastion": "Bastion"
+    },
+    "Sheet": {
+      "Bastion": "Fiche de bastion"
+    },
+    "Bastion": {
+      "Name": "Nom du bastion",
+      "Description": "Description"
+    },
+    "Space": {
+      "Label": "Bâtiment",
+      "Name": "Nom du bâtiment",
+      "New": "Nouveau bâtiment",
+      "Unnamed": "Bâtiment sans nom",
+      "Add": "Ajouter un bâtiment",
+      "Delete": "Supprimer ce bâtiment",
+      "DeleteConfirm": "Supprimer le bâtiment <strong>{name}</strong> et ses postes ? Ses occupants redeviendront non affectés.",
+      "None": "Aucun bâtiment pour le moment."
+    },
+    "Place": {
+      "Add": "Ajouter un poste",
+      "Delete": "Retirer ce poste",
+      "None": "Aucun poste pour le moment.",
+      "RemoveOccupant": "Retirer cet occupant",
+      "InvalidOccupant": "Seuls les PNJ et les personnages joueurs de ce monde peuvent occuper un poste.",
+      "AlreadyOccupied": "Ce poste est déjà occupé.",
+      "DeleteOccupied": "Libérez ce poste avant de le retirer."
+    },
+    "Role": {
+      "Label": "Rôle du poste",
+      "None": "Sans rôle",
+      "mercenary": "Mercenaire",
+      "artisan": "Artisan",
+      "scholar": "Érudit",
+      "worker": "Ouvrier"
+    },
+    "Order": {
+      "Label": "Ordre",
+      "None": "Sans ordre",
+      "keepOrder": "Maintenir l'ordre",
+      "patrol": "Patrouiller",
+      "hunt": "Chasser",
+      "explore": "Explorer",
+      "craft": "Fabriquer",
+      "repair": "Réparer",
+      "enchant": "Enchanter",
+      "teach": "Enseigner",
+      "study": "Étudier",
+      "castSpells": "Lancer des sorts",
+      "createScrolls": "Créer des parchemins",
+      "translate": "Traduire",
+      "build": "Bâtir",
+      "harvest": "Récolter",
+      "assist": "Assister",
+      "transport": "Transporter",
+      "tendAnimals": "S'occuper des animaux"
+    }
+  }
+}
